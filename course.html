@@ -258,5 +258,13 @@ Accelerate your HSC exam preparation with targeted lessons designed for science 
 <!-- custom js file link -->
 <script src="js/script.js"></script>
 
+    <script>
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('/service-worker.js')
+      .then(reg => console.log('SW registered ✅'))
+      .catch(err => console.error('SW registration failed ❌', err));
+  }
+    </script>
+
 </body>
 </html>
